@@ -146,5 +146,5 @@ ${placket}${extra}${collar}
   const fmt = n => Math.round(n).toLocaleString('en-US') + ' دج';
 
   window.STAYLE = { products, byId, looks, SIZES, CUTS, art, qamisSVG, uri, fmt, BUNDLE_OFF: 0.1,
-    WHATSAPP: '213000000000' /* ← ضع رقم واتساب المتجر هنا بصيغة دولية بدون + */ };
+    WHATSAPP: '213557496406' /* ← ضع رقم واتساب المتجر هنا بصيغة دولية بدون + */ };
 })();
