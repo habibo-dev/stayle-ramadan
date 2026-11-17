@@ -41,7 +41,7 @@
       } else {
         list.innerHTML = this.items.map(it => {
           const p = S.byId[it.id];
-          return `<li class="bag__row"><img src="${S.art(p, it.color)}" alt="" width="56" height="112">
+          return `<li class="bag__row"><img src="${S.art(p, it.color)}" alt="" width="56" height="112" loading="lazy">
           <div><b>قميص ${p.brand}</b><span>${p.colors[it.color].n} · المقاس ${it.size}${it.bundle ? ' · عرض الإطلالة' : ''}</span>
           <span>${S.fmt(this.price(it))}</span></div>
           <div class="bag__qty"><button data-q="${it.key}" data-d="-1" aria-label="إنقاص">−</button><span>${it.qty}</span><button data-q="${it.key}" data-d="1" aria-label="زيادة">+</button></div></li>`;
