@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0f3d2e">
+<title>STAYLE — قمصان رجالية لرمضان</title>
+<meta name="description" content="متجر قمصان رجالية للمسجد والاعتكاف والمناسبات: النور، الدفة، الأصيل، الجاسم وأكثر. ست إطلالات كاملة لرمضان.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="site-top">
+  <div class="topbar">رمضان ١٤٤٨ يبدأ تقريباً بعد <b id="cd">—</b> يوم · اطلب قميصك قبل الزحام</div>
+  <header class="site-header">
+    <a href="./" class="brand" aria-label="STAYLE — الرئيسية"><span class="brand__mark" aria-hidden="true">☪</span><span class="brand__name">ستايل</span><span class="brand__en">STAYLE</span></a>
+    <nav aria-label="التنقل الرئيسي"><a href="#runway" aria-current="page">الإطلالات</a><a href="#catalog">المجموعة</a><a href="#cuts">دليل القصات</a></nav>
+    <button id="open-bag" aria-label="فتح الحقيبة">
+      <svg width="22" height="24" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 8h16l1 16H3L4 8zM8 8V6a4 4 0 0 1 8 0v2"/></svg>
+      <span data-cart-count>0</span></button>
+  </header>
+</div>
+
+<main>
+  <runway-section id="runway" data-autoplay="true" data-speed="5000"></runway-section>
+
+  <section class="sec" id="catalog">
+    <div class="sec__head"><span class="eyebrow">المجموعة الكاملة</span><h2>اختر قميصك</h2>
+      <p>قمصان رجالية مخصصة لمن يصلّون في المساجد، بقصّات وخامات متنوعة.</p></div>
+    <div class="chips" id="catalog-chips" role="group" aria-label="تصفية حسب القصة"></div>
+    <div class="grid" id="catalog-grid"></div>
+  </section>
+
+  <section class="sec sec--tint" id="cuts">
+    <div class="sec__head"><span class="eyebrow">دليل القصات</span><h2>ما الفرق بين القصّات؟</h2></div>
+    <dl class="cuts">
+      <div><dt>ديور المكرمش</dt><dd>موديل شبابي مشهور بقماشه المموج.</dd></div>
+      <div><dt>الإندونيسي (علبة)</dt><dd>ياقة صلبة وتطريزات فخمة.</dd></div>
+      <div><dt>الإماراتي / الخليجي</dt><dd>خيط متدلٍّ (الطربوشة) وانسيابية في القماش.</dd></div>
+      <div><dt>العُماني</dt><dd>رقبة دائرية وتطريز بسيط.</dd></div>
+      <div><dt>المغربي / الجابادور</dt><dd>تصاميم بلمسة مغاربية تقليدية.</dd></div>
+      <div><dt>سليم فيت</dt><dd>قصة مخصّرة تفضلها فئة الشباب.</dd></div>
+      <div><dt>دومي مونش</dt><dd>القميص الصيفي بنصف كم.</dd></div>
+      <div><dt>غلاصي (Glacé)</dt><dd>قماش بلمعة خفيفة وملمس ناعم.</dd></div>
+      <div><dt>الاعتكاف / الصلاة</dt><dd>واسع وعملي للمسجد والراحة اليومية.</dd></div>
+    </dl>
+  </section>
+</main>
+
+<footer class="foot">
+  <b>ستايل · STAYLE</b>
+  <p>الأسعار والألوان المعروضة تجريبية وقابلة للتعديل، والرسومات توضيحية وليست صور المنتجات الأصلية. الطلب يُرسل عبر واتساب ويؤكَّد معك قبل الشحن.</p>
+</footer>
+
+<dialog id="bag-dialog" aria-labelledby="bag-title">
+  <div class="bag">
+    <div class="bag__head"><h2 id="bag-title">حقيبتي</h2><button data-close aria-label="إغلاق">✕</button></div>
+    <ul id="bag-list" class="bag__list"></ul>
+    <div class="bag__sum"><span>المجموع</span><strong id="bag-total">0 دج</strong></div>
+    <div class="bag__saved" id="bag-saved"></div>
+    <div class="bag__form">
+      <input id="bag-name" placeholder="الاسم الكامل" autocomplete="name">
+      <input id="bag-phone" placeholder="رقم الهاتف" inputmode="tel" autocomplete="tel">
+      <input id="bag-city" placeholder="الولاية">
+    </div>
+    <button id="bag-send" class="btn btn--wide" disabled>أرسل الطلب عبر واتساب</button>
+  </div>
+</dialog>
+<div id="bag-status" role="status" aria-live="polite"></div>
+
+<script src="data.js"></script>
+<script src="shop.js"></script>
+<script src="runway.js"></script>
+</body>
+</html>
